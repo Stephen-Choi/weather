@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	<link rel="stylesheet" type="text/css" href="{% static 'weather/styles.css' %}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="vid">
+    <video id="video" autoplay loop>
+        <source src={% static 'weather/videos/sun.mp4' %} type="video/mp4"/>
+    </video>
+    <div class="overlay">
+        <div class="container info">
+        	<h1 class="event1">{{event}}</h1>
+        	<h2 class="conditions1">{{conditions}}</h2>
+        	<br>
+        	<br>
+        	<br>
+        	<div class="row">
+	        	<div class="col-sm-4 box">
+	        		<div class="line">
+	        			<h2 class="time1">Morning</h2>
+	        		</div>
+	        		<h1 class="weather1">{{morn_temp}}</h1>
+	        	</div>
+	        	<div class="col-sm-4 box">
+	        		<div class="line">
+	        			<h2 class="time1">Day</h2>
+	        		</div>
+	        		<h1 class="weather1">{{day_temp}}</h1>
+	        	</div>
+	        	<div class="col-sm-4 box">
+	        		<div class="line">
+	        			<h2 class="time1">Evening</h2>
+	        		</div>
+	        		<h1 class="weather1">{{night_temp}}</h1>
+        		</div>
+        	</div>
+        </div>
+    </div>
+</div>  
+
+
+
+</body>
+</html>

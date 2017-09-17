@@ -1,0 +1,135 @@
+body {
+	background-color: black;
+}
+
+/*index page*/
+.img {
+	width: 100%;
+	height: 500px;
+	background-image: url('weather/images/weather-app.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+label {
+	color: #E5E5E5;
+}
+
+.sub {
+	margin-top: 15px;
+	margin-left: 13px;
+}
+
+/*result page*/
+.vid { position:relative; }
+.vid video {
+    position:relative;
+    z-index:0;
+}
+.overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+#video {
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+}
+
+.back2 {
+	background-color: white;
+}
+
+.info {
+	margin-top: 50px;
+	margin-left: 12px;
+}
+
+.event {
+	color: white;
+	font-size: 55px;
+	text-align: center;
+	margin-left: 110px;
+}
+
+.conditions {
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	margin-left: 110px;
+}
+
+.box {
+	/*background-color: #e8e8e8;*/
+	width: 300px;
+	height: 400px;
+	margin-left: 90px;
+	margin-top: 20px;
+}
+
+.time {
+	color: white;
+	font-size: 35px;
+	text-align: center;
+}
+
+.weather {
+	color: white;
+	font-size: 150px;
+	text-align: center;
+	margin-top: 70px;
+}
+
+.line1 {
+	width: 60%;
+	border-bottom: solid 5px white;
+	margin-left: 56px;
+}
+
+/*result1*/
+.event1 {
+	color: black;
+	font-size: 55px;
+	text-align: center;
+	margin-left: 110px;
+}
+
+.conditions1 {
+	color: black;
+	font-size: 40px;
+	text-align: center;
+	margin-left: 110px;
+}
+
+.time1 {
+	color: black;
+	font-size: 40px;
+	text-align: center;
+}
+
+.weather1 {
+	color: black;
+	font-size: 150px;
+	text-align: center;
+	margin-top: 70px;
+}
+
+.line {
+	width: 60%;
+	border-bottom: solid 5px black;
+	margin-left: 56px;
+}
+
+.arrow {
+	color: white;
+	font-size: 50px;
+}
+
+a:hover {
+	outline: none;
+	border: none;
+}
+

@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Weather</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'weather/styles.css' %}"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    .img {
+      width: 100%;
+      height: 500px;
+      background-image: url({% static 'weather/images/weather-app.png' %});
+      background-size: cover;
+      background-repeat: no-repeat;
+}
+  </style>
+
+</head>
+<body>
+
+<div class="container img"></div> 
+
+<br>
+<br>
+
+
+<div class="container">
+  <form action="{% url 'weather:result' %}" method="post">{% csrf_token %}
+    <div class="form-row">
+      <div class="form-group col-sm-6">
+        <label for="city" class="col-form-label">City </label>
+        <input type="text" class="form-control" id="city" value="" name="city" placeholder="Ex: Waterloo">
+      </div>
+      <div class="form-group col-sm-6">
+        <label for="country" class="col-form-label">Country Code</label>
+        <input type="text" class="form-control" id="country" maxlength="2" value="" name="country" placeholder="Ex: CA,US">
+      </div>
+      <div class="form-group col-sm-6">
+        <label for="Date" class="col-form-label">Date </label>
+        <input type="date" class="form-control" id="Date" value="" name="date">
+      </div>
+      <div class="form-group col-sm-6">
+        <label for="event" class="col-form-label">Event </label>
+        <input type="text" class="form-control" id="event" value="" name="event" placeholder="Ex: Shopping, Biking">
+      </div>
+      <input type="submit" class="btn btn-primary sub" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
